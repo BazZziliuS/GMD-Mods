@@ -12,13 +12,11 @@ IGS("Battlepass", "battlepass")
 end)
 
 -- Выдаёт игроку +1 уровень к battlepass
-IGS("+1 к уровню Battlepass", "battlepass+1")
-:SetDescription("Добавляет +1 к уровню Battlepass.\nПри покупке 2 штук, будет +2 уровня, 3 шт = +3 уровня")
-:SetStackable(true)
-:SetPrice(25)
-:SetOnActivate(function(ply)
-	RunConsoleCommand("battlepass_give_tier", ply:SteamID64(), "1")
-end)
+IGS("+1 Уровень BATTLEPASS", "tiersbattlepass1")
+    :SetPrice(49)
+    :SetStackable(true)
+    :SetOnActivate(function (ply) RunConsoleCommand('battlepass_give_tier', ply:SteamID64(), '1') end)
+    :SetDescription("Получай крутые награды в новой системе BATTLEPASS!")
 
 -- Добавление battlepass наград которые выдают IGS предметы/валюту
 -- источник: https://forum.gm-donate.net/t/xenin-battlepass-igs/1293
